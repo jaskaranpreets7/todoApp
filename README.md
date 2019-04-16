@@ -1,0 +1,4 @@
+# todoApp
+TodoApp build with ReactJS, holds the real-time data with firebase and hosted on firebase as well 
+
+hosted on : https://todolist-1dbbf.firebaseapp.com/
