@@ -1,0 +1,6 @@
+.btn-position{
+    position: fixed !important;
+    bottom: 0!important;
+    right: 0!important;
+    width: 100%!important;
+}
