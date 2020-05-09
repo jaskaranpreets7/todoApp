@@ -7,8 +7,8 @@ class TodoForm extends Component {
     initialValue :''
   }
 
-   handleInputChange = (e) => {
-     this.setState({initialValue: e.target.value} , ()=> { this.sendData()})
+  handleInputChange = (e) => {
+    this.setState({initialValue: e.target.value} , ()=> { this.sendData()})
   }
 
   sendData = () =>{
@@ -30,23 +30,13 @@ class TodoForm extends Component {
   }
   render(){
     return ( 
-      <div>
         <form className="ui form">
-          <div className="field">
+          <div className="field" style={{display:'flex'}}>
             <input type="text" id="task" placeholder="Add tasks" value={this.state.initialValue} onChange={(e)=>this.handleInputChange(e)}/> 
+            <div className={`ui bottom attached button ${this.props.disable ? 'disabled' : ''}`} onClick={(e)=>this.addTask(e)} >Submit</div>
           </div>
         </form>
-        <div className="btn-position" style={{paddingTop:'30px'}}>
-          {this.props.disable ? <div className="ui bottom disabled attached button" onClick={(e)=>this.addTask(e)} >
-              Add 
-              </div>:<div className="ui bottom attached button" onClick={(e)=>this.addTask(e)} >
-              Add 
-              </div>}
-        </div> 
-      </div>
     )
-
   }
-  
 }
 export default TodoForm;
